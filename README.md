@@ -80,17 +80,12 @@ Python 2.7 or later - https://www.python.org/downloads/
 
 ### -- Install App -- 
 
-` ` ` 
-
+``` 
 git clone https://github.com/Erickkbentz/JuniorDesignApp.git 
-
 cd JuniorDesignApp 
- 
 git submodule init 
-
 git submodule update 
-
- ` ` `
+```
 
 ### -- Setup Frontend and Prisma database client -- 
 ` ` `
