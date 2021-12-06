@@ -84,66 +84,50 @@ Python 2.7 or later - https://www.python.org/downloads/
 
 git clone https://github.com/Erickkbentz/JuniorDesignApp.git 
 
-  
-
 cd JuniorDesignApp 
-
-  
-
+ 
 git submodule init 
-
-  
 
 git submodule update 
 
-  
+ ` ` `
 
 ### -- Setup Frontend and Prisma database client -- 
+` ` `
 
 cd JuniorDesignFE 
 
- 
-
 npm install 
-
-  
 
 npm i -g prisma@latest 
 
-  
 
 npm i @prisma/client@latest 
 
-  
 
 prisma generate 
-
-  
+` ` ` 
 
 ### -- Setup Machine Learning -- 
+` ` `
 
 cd ../JuniorDesignML 
 
- 
-
 pip install Flask praw pandas numpy PyPDF2 nltk text2emotion datetime 
-
+` ` `
   
 
 NOTE: If running into any bugs 'module xxx does not exist' run 'pip install xxx' 
 
 NOTE: If getting an error when installing Flask, try running:  
+` ` `
 
 python3 –m venv venv 
 
- 
-
 . venv/bin/activate 
 
- 
-
 pip install Flask 
-
+` ` `
  
 
 ## How to Run App 
@@ -151,27 +135,21 @@ pip install Flask
 ### -- Start up Frontend Server -- 
 
 CD to ‘/JuniorDesignApp/JuniorDesignFE’ 
-
  
-
+` ` `
 npm run build 
 
- 
-
 npm run start 
-
- 
+` ` `
 
 ### -- Start up Machine Learning Server -- 
 
 On a separate terminal session/tab  
 
 CD to ‘/JuniorDesignApp/JuniorDesignML’ 
-
- 
-
+` ` `
 python app.py 
-
+` ` `
  
 
 ### -- Open database Prisma UI -- 
@@ -179,33 +157,30 @@ python app.py
 On a separate terminal session/tab 
 
 CD to ‘/JuniorDesignApp/JuniorDesignFE’ 
-
- 
-
+` ` `
 prisma studio 
 
- 
+ ` ` `
 
 ### -- Troubleshooting -- 
 
 If the prisma is causing errors and prisma generate is also not working, try adding  
-
+` ` `
 generator client { 
 
   provider = "prisma-client-js" 
 
 } 
-
+` ` `
 To the schema.prisma file under the prisma folder in the JuniorDesignFE repository.  
 
 Then run: 
-
-npx prisma generate\ 
-
- 
+` ` `
+npx prisma generate
+` ` `
 
 If the submodules are not updating correctly, try running: 
-
+` ` `
 git submodule update – remote 
-
+` ` `
  
