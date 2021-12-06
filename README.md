@@ -2,13 +2,13 @@
 
  
 
-#Version 1.0 
+# Version 1.0 
 
-###General Information 
+### General Information 
 
 This is a web-application that can be hosted locally on your computer. This application takes in user-inputted data as a URL to a subreddit. It outputs the data after identifying any persuasion used in the posts form the reddit page and categorizes each instance of persuasion into one of the 3 main forms of rhetoric: Ethos, Logos, and Pathos. The analysis is then displayed as a “Job” on the Jobs page where the user can view graphical displays of the persuasion identified. 
 
-###Machine Learning Info 
+### Machine Learning Info 
 
 *-- Stage 1: Persuasion Detection --* 
 
@@ -26,7 +26,7 @@ Ultimately what we use is a system that scans the bodies of text for the most ba
 
 ## Release Notes 
 
-###New Software Features 
+### New Software Features 
 
 Ability to input a link to any subreddit or specific reddit page 
 
@@ -40,7 +40,7 @@ Display analyzed data for each dataset as pie charts showing persuasion and pers
 
 Download displays of analyzed data from machine learning model 
 
-###Bugs Found and Fixed in Development 
+### Bugs Found and Fixed in Development 
 
 There was a bug in the ML Server where if comments were added to a post as we were scraping the contents of it, the job would fail. This was ‘fixed’ by creating a temporary buffer of 10,000 to store new comments in. This could theoretically still crash if more than 10k comments are added while scraping. 
 
@@ -48,13 +48,13 @@ The JSON output from the ML Server was unusable to chart.js. This was fixed by r
 
 Initially, when attempting to connect the front end user elements to the prisma database, we encountered many run time errors. This bug was resolved by implementing an API that sends requests to post to prisma. 
 
-###Known Bugs and Defects 
+### Known Bugs and Defects 
 
 The file input does not work fully from front to back end, the file input form creates a fake directory path before the file name. 
 
 The Log in screen and log out button sometimes show errors on the screen when used, refreshing the page will resume the application without error and achieve the desired result from the log in screen or log out button. 
 
-###Unimplemented Features 
+### Unimplemented Features 
 
 We gave a more thorough explanation of lacking features in the Machine Learning Info section. We provided a more detailed explanation of our development there which includes what we use in our finished product.  
 
@@ -64,7 +64,7 @@ As for the frontend, there is still some data in the JSON output that is current
 
 ## Installation Guide 
 
-###-- Pre-requisites -- 
+### -- Pre-requisites -- 
 
 Our app was made using Next.js which relies on the React framework. Our database is handled using the Prisma library. Our machine learning model uses the NLTK API. The charts in the job-view-page are created using the Chart.js library.  
 
@@ -78,7 +78,9 @@ Python 2.7 or later - https://www.python.org/downloads/
 
  
 
-###-- Install App -- 
+### -- Install App -- 
+
+` ` ` 
 
 git clone https://github.com/Erickkbentz/JuniorDesignApp.git 
 
@@ -96,7 +98,7 @@ git submodule update
 
   
 
-###-- Setup Frontend and Prisma database client -- 
+### -- Setup Frontend and Prisma database client -- 
 
 cd JuniorDesignFE 
 
@@ -118,7 +120,7 @@ prisma generate
 
   
 
-###-- Setup Machine Learning -- 
+### -- Setup Machine Learning -- 
 
 cd ../JuniorDesignML 
 
@@ -146,7 +148,7 @@ pip install Flask
 
 ## How to Run App 
 
-###-- Start up Frontend Server -- 
+### -- Start up Frontend Server -- 
 
 CD to ‘/JuniorDesignApp/JuniorDesignFE’ 
 
@@ -160,7 +162,7 @@ npm run start
 
  
 
-###-- Start up Machine Learning Server -- 
+### -- Start up Machine Learning Server -- 
 
 On a separate terminal session/tab  
 
@@ -172,7 +174,7 @@ python app.py
 
  
 
-###-- Open database Prisma UI -- 
+### -- Open database Prisma UI -- 
 
 On a separate terminal session/tab 
 
@@ -184,7 +186,7 @@ prisma studio
 
  
 
-###-- Troubleshooting -- 
+### -- Troubleshooting -- 
 
 If the prisma is causing errors and prisma generate is also not working, try adding  
 
