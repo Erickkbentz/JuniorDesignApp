@@ -141,6 +141,8 @@ prisma studio
 
 ### -- Troubleshooting -- 
 
+#### Prisma #### 
+
 If the prisma is causing errors and prisma generate is also not working, try adding  
 ```
 generator client { 
@@ -161,3 +163,6 @@ If the submodules are not updating correctly, try running:
 git submodule update – remote 
 ```
  
+#### Log In and Log Out#### 
+
+If a window appears on the screen alerting the user of a runtime error after pressing the “Log In” button, refreshing the screen will resume the application and log the user in. Similarly, when the user is logging out, there might be an alert immediately after pressing the “Log Out” button. Refreshing the page should fix this problem. 
